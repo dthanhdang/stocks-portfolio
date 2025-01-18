@@ -28,7 +28,7 @@ export function FinancialInstrumentItem({
 
   return (
     <>
-      <TextLink to="/">{instrument.id}</TextLink>
+      <TextLink to="/">{instrument.name}</TextLink>
       <Button onClick={handleDeleteModal}>Delete</Button>
     </>
   );
