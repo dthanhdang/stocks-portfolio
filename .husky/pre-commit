@@ -1,0 +1,1 @@
+pnpm generate_code && pnpm lint-staged --concurrent false && pnpm tsc:check && pnpm unit_tests

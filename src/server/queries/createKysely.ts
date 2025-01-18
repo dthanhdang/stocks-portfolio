@@ -1,0 +1,15 @@
+import type { DB } from "stocks-portfolio/server/generated/db";
+
+import { D1Dialect } from "@noxharmonium/kysely-d1";
+import { CamelCasePlugin, Kysely } from "kysely";
+
+export type Env = {
+  DB: D1Database;
+};
+
+export function createKysely(env: Env): Kysely<DB> {
+  return new Kysely<DB>({
+    dialect: new D1Dialect({ database: env.DB }),
+    plugins: [new CamelCasePlugin()],
+  });
+}

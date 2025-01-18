@@ -1,0 +1,3 @@
+pnpm-lock.yaml
+.vite
+src/client/_generated/routeTree.gen.ts

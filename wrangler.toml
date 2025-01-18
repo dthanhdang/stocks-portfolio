@@ -1,0 +1,9 @@
+name = "stocks-portfolio"
+pages_build_output_dir = "./dist"
+compatibility_flags = [ "nodejs_compat" ]
+compatibility_date = "2024-09-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "development-stocks-portfolio"
+database_id = "e28801ad-73ce-4b42-a771-1525acb7df8d"
