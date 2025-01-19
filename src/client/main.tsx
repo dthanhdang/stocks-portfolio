@@ -1,12 +1,14 @@
 import { MantineProvider } from "@mantine/core";
+import { ModalsProvider } from "@mantine/modals";
+import { Notifications } from "@mantine/notifications";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import { routeTree } from "./_generated/routeTree.gen";
 import "./index.css";
+import { routeTree } from "./_generated/routeTree.gen";
 
 const queryClient = new QueryClient();
 
@@ -32,10 +34,13 @@ if (root)
   createRoot(root).render(
     <StrictMode>
       <MantineProvider>
-        <QueryClientProvider client={queryClient}>
-          <RouterProvider router={router} />
-          <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
+        <Notifications />
+        <ModalsProvider>
+          <QueryClientProvider client={queryClient}>
+            <RouterProvider router={router} />
+            <ReactQueryDevtools initialIsOpen={false} />
+          </QueryClientProvider>
+        </ModalsProvider>
       </MantineProvider>
     </StrictMode>,
   );

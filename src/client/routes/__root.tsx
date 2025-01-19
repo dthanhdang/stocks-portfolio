@@ -17,11 +17,10 @@ function RootComponent(): React.JSX.Element {
     <>
       <TanStackRouterDevtools />
 
-      <div className="bg-blue-400 p-5 text-white underline">
-        <Link to="/">
-          <h1>Home</h1>
-        </Link>
-      </div>
+      <nav className="flex flex-row space-x-6 bg-blue-400 p-8 text-white">
+        <Link to="/">Home</Link>
+        <Link to="/instrument">Instruments List</Link>
+      </nav>
       <div className="p-5">
         <Outlet />
       </div>

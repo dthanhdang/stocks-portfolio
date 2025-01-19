@@ -2,7 +2,6 @@ import { Button, Select, Stack, TextInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { valibotResolver } from "mantine-form-valibot-resolver";
 import React from "react";
-import { useEffect } from "react";
 
 import {
   type FinancialInstrumentEditorFormData,
@@ -31,10 +30,6 @@ export function FinancialInstrumentEditor({
     initialValues: initialValues ?? defaultInitialValues,
     validate: valibotResolver(formDataSchema),
   });
-
-  useEffect(() => {
-    if (initialValues) form.setValues(initialValues);
-  }, [initialValues, form]);
 
   /*function handleValidate(data: FinancialInstrumentEditorFormData): void {
     onValidate(data);

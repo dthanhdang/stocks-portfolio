@@ -3,7 +3,7 @@ import type { FinancialInstrument } from "stocks-portfolio/client/types";
 import { handleError } from "./handleError.js";
 import { honoClient } from "./honoClient.js";
 
-export async function getFinancialInstrumentbyId(
+export async function getFinancialInstrumentById(
   id: number,
 ): Promise<FinancialInstrument> {
   try {
@@ -14,6 +14,5 @@ export async function getFinancialInstrumentbyId(
     return await response.json();
   } catch (error) {
     handleError(error, "Error while loading");
-    throw error;
   }
 }

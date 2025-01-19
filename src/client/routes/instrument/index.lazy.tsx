@@ -1,16 +1,14 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { ListFinancialInstrumentsPage } from "stocks-portfolio/client/pages/list_financial_instruments";
+import { useDeleteFinancialInstrumentMutation } from "stocks-portfolio/client/tanstack/query/mutations";
 
 export const Route = createLazyFileRoute("/instrument/")({
   component: PageWrapper,
 });
 
-const handleDelete = (): void => {
-  /*do nothing*/
-};
-
 function PageWrapper(): React.JSX.Element {
+  const handleDelete = useDeleteFinancialInstrumentMutation().mutate;
   const { query } = Route.useLoaderData();
 
   const { data } = useSuspenseQuery(query);

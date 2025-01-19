@@ -60,8 +60,8 @@ importers:
         specifier: ^7.15.1
         version: 7.15.1(@mantine/core@7.15.1(@mantine/hooks@7.15.1(react@19.0.0))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@mantine/hooks@7.15.1(react@19.0.0))(@tiptap/extension-link@2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.3))(@tiptap/pm@2.10.3))(@tiptap/react@2.10.3(@tiptap/core@2.10.3(@tiptap/pm@2.10.3))(@tiptap/pm@2.10.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@meow-meow-dev/server-utilities':
-        specifier: ^3.3.3
-        version: 3.3.3(typescript@5.7.2)
+        specifier: ^3.4.0
+        version: 3.4.0(typescript@5.7.2)
       '@noxharmonium/kysely-d1':
         specifier: ^0.4.0
         version: 0.4.0(kysely@0.27.5)
@@ -1224,8 +1224,8 @@ packages:
     engines: {node: '>=22.0.0'}
     hasBin: true
 
-  '@meow-meow-dev/server-utilities@3.3.3':
-    resolution: {integrity: sha512-CGGu3PH1+KsLAUZj4g79WUbCDORYVndQ68YVJSBde25iCLvFl3FrQgbA+J/Irimpu0yWrl3FFkGcOqi8iH1RbA==}
+  '@meow-meow-dev/server-utilities@3.4.0':
+    resolution: {integrity: sha512-KVgaQAHHPS5ekb2gRx2/y7FTktvt9ZhRYJbB1jA2IuXLAcA0dKjMENmpqizyugNMJ81mcuAP8RhQTvxtFMpNbw==}
     engines: {node: '>=22.0.0'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -6068,7 +6068,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@meow-meow-dev/server-utilities@3.3.3(typescript@5.7.2)':
+  '@meow-meow-dev/server-utilities@3.4.0(typescript@5.7.2)':
     dependencies:
       '@hono/oauth-providers': 0.6.2(hono@4.6.16)
       '@hono/valibot-validator': 0.5.2(hono@4.6.16)(valibot@1.0.0-beta.11(typescript@5.7.2))

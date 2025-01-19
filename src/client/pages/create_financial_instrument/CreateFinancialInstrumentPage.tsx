@@ -1,4 +1,6 @@
-import React, { ComponentProps } from "react";
+import type { ComponentProps } from "react";
+
+import React from "react";
 import { FinancialInstrumentEditor } from "stocks-portfolio/client/components/financial_instrument_editor";
 
 type CreateFinancialInstrumentPageProps = Pick<

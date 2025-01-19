@@ -16,10 +16,11 @@ export function FinancialInstrumentsList({
   const handleDelete = (id: number) => {
     return (): void => {
       onDelete(id);
+      console.log({ id });
     };
   };
   return (
-    <div>
+    <ul className="rounded-md bg-zinc-100 p-6 shadow-md">
       {instruments.map((instrument) => (
         <FinancialInstrumentItem
           instrument={instrument}
@@ -27,6 +28,6 @@ export function FinancialInstrumentsList({
           onDelete={handleDelete(instrument.id)}
         />
       ))}
-    </div>
+    </ul>
   );
 }

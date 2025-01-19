@@ -27,9 +27,12 @@ export function FinancialInstrumentItem({
   }
 
   return (
-    <>
-      <TextLink to="/">{instrument.name}</TextLink>
+    <li className="flex items-center justify-between p-4">
+      <TextLink params={{ id: instrument.id.toString() }} to="/instrument/$id">
+        {instrument.name}
+      </TextLink>
+
       <Button onClick={handleDeleteModal}>Delete</Button>
-    </>
+    </li>
   );
 }
